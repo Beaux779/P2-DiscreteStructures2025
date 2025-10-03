@@ -54,7 +54,27 @@ The program requires three command-line arguments:
 ### input2.dat
 `a b`
 
-### output.dat
+### output.dat  
+`A = {1,2,3}`  
+`B = {a,b}`  
+`A X B = {(1,a),(1,b),(2,a),(2,b),(3,a),(3,b)}`  
+`There are 6 elements in the Cartesian Product.`  
+`--------------------------------`  
+`Subsets of A:`  
+`{}`  
+`{1}`  
+`{2}`  
+`{3}`  
+`{1,2}`  
+`{1,3}`  
+`{2,3}`  
+`{1,2,3}`  
+`There are 8 subsets of A.`  
+`--------------------------------`  
+`A = {1,2,3}`  
+`B = {a,b}`  
+`A ∩ B = {}`  
+`--------------------------------`  
 ---
 
 ## Authors
