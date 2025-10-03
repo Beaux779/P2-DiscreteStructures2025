@@ -82,7 +82,7 @@ void Set::print(ostream& o, const char* msg) {
 }
 int Set::getSize() const {return size;} 
 string Set::getElement(int index) const {
-    if(index << 0 || index >= size) 
+    if(index < 0 || index >= size) 
     {
         throw std::out_of_range("Index out of bounds.");
     }
