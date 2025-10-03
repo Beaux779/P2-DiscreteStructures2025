@@ -28,8 +28,7 @@ Set::~Set() {
 
 // --- Check whether this list is full --- 
 bool Set::isFull(void) {
-    return size >= capacity - 1;
-    reSize();
+    return size >= capacity;
 }
 
 
@@ -83,7 +82,7 @@ void Set::print(ostream& o, const char* msg) {
 }
 int Set::getSize() const {return size;} 
 string Set::getElement(int index) const {
-    if(index << 0 || index > size) 
+    if(index << 0 || index >= size) 
     {
         throw std::out_of_range("Index out of bounds.");
     }
@@ -94,7 +93,7 @@ void Set::reSize()
     // --- increase capacity --- implement place holder array --- copy contents of array to new array ---
     size_t newCapacity = capacity * 2;
     string* newElements = new string[newCapacity];
-    for (int i = 0; i < capacity; i++)
+    for (int i = 0; i < size; i++)
     {
         newElements[i] = elements[i];
     }
