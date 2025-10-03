@@ -23,57 +23,40 @@ The program:
 
 ---
 
-Compilation
+## Compilation
 
-Using make
-make -f p02make
+### Using make
+`make -f p02make`
 
-Manual g++ Compilation (Windows PowerShell or CMD)
-g++ -g -c Set.cpp
-g++ -g -c p02.cpp
-g++ -o p02.exe p02.o Set.o
+### Manual g++ Compilation (Windows PowerShell or CMD)
+`g++ -g -c Set.cpp`  
+`g++ -g -c p02.cpp`  
+`g++ -o p02.exe p02.o Set.o`  
 
-Running
+---
 
-The program requires three command-line arguments:
+## Running
+The program requires three command-line arguments:  
+1. Input file for Set A  
+2. Input file for Set B  
+3. Output file for results  
 
-Input file for Set A
+**Example (Windows PowerShell):**  
+`.\p02.exe input1.dat input2.dat output.dat`
 
-Input file for Set B
+---
 
-Output file for results
+## Example
 
-Example (Windows PowerShell):
-.\p02.exe input1.dat input2.dat output.dat
+### input1.dat
+`1 2 3`
 
-Example
+### input2.dat
+`a b`
 
-input1.dat
-1 2 3
+### output.dat
+---
 
-input2.dat
-a b
-
-output.dat
-A = {1,2,3}
-B = {a,b}
-A X B = {(1,a),(1,b),(2,a),(2,b),(3,a),(3,b)}
-There are 6 elements in the Cartesian Product.
-Subsets of A:
-{}
-{1}
-{2}
-{3}
-{1,2}
-{1,3}
-{2,3}
-{1,2,3}
-There are 8 subsets of A.
-A = {1,2,3}
-B = {a,b}
-A ∩ B = {}
-Authors
-
-Beaux Dolf – bdolf1@uco.edu
-
-Jacob Simon – jacob41simon@uco.edu
+## Authors
+- Beaux Dolf – bdolf1@uco.edu  
+- Jacob Simon – jacob41simon@uco.edu  
