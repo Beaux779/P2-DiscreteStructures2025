@@ -1,4 +1,3 @@
-# P2-DiscreteStructures2025
 # P2 – Discrete Structures 2025
 
 ## Project Overview
