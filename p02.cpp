@@ -1,7 +1,7 @@
-// TODO: add your information for this project
+// User inputs 2 sets, Program reads it, Prints the Cartesian product, subsets, intersection, and writes it all out into output data.
 // ----------------------------------------------
 // Author(s):   Beaux Dolf, Jacob Simon
-// Email(s):    bdolf1@uco.edu 
+// Email(s):    bdolf1@uco.edu , jacob41simon@uco.edu
 // ----------------------------------------------
 
 
@@ -41,12 +41,31 @@ struct FileException {
 void get_subsets(Set &s1, ostream& o) {
 	s1.print(o, "A=");  // --- print set to the output stream --- 
 
-    int count = 0;
-    // STILL NEEDS TO BE DONE
-    if (count < 2)
-        o << "There is " << count << " subset of A." << endl;
+    int n = s1.getSize();                       
+    int total = 1 << n;             
+    o << "Subsets of A:" << endl;             
+
+    for (int mask = 0; mask < total; ++mask) 
+    { 
+        o << "{";
+        bool first = true;
+        for (int i = 0; i < n; ++i) 
+        {
+            if (mask & (1 << i)) 
+            {
+                if (!first) o << ",";
+                o << s1.getElement(i);
+                first = false;
+            }
+        }
+        o << "}" << endl;
+    }
+
+    if (total == 1)
+        o << "There is " << total << " subset of A." << endl;
     else 
-        o << "There are " << count << " subsets of A." << endl;
+        o << "There are " << total << " subsets of A." << endl;
+
     o << "--------------------------------" << endl;
 }
 
